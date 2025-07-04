@@ -1,0 +1,112 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Навыки — Azz</title>
+
+  <!-- общий стиль проекта -->
+  <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/devicons@2.15.1/css/devicons.min.css">
+    <link rel="icon" href="{% static 'myapp/images/favicon.ico' %}" type="image/x-icon" />
+    <!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+  
+  <link rel="stylesheet" href="{% static 'myapp/css/style.css' %}" />
+  <!-- devicon: моно-иконки SVG -->
+
+</head>
+<body>
+  <div id="particles-js"></div>
+<!-- Loader -->
+<div id="loader">
+  <div class="dot-loader">
+    <span></span><span></span><span></span>
+  </div>
+</div>
+
+
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">Azz</div>
+        <button id="burgerBtn" aria-label="Открыть меню">
+      <i id="burgerIcon" class="fas fa-bars"></i>
+    </button>
+      <ul class="nav-links">
+        <li><a href="{% url 'home' %}">Главная</a></li>
+        <li><a href="{% url 'about' %}">Обо мне</a></li>
+        <li><a href="{% url 'skills' %}">Навыки</a></li>
+        <li><a href="{% url 'contact' %}">Контакты</a></li>
+        <li>
+  <button id="themeToggle">
+    <i id="themeIcon" class="fa-solid fa-moon"></i>
+  </button>
+</li>
+      </ul>
+    </div>
+  </nav>
+
+
+
+  <main>
+    <section class="skills-section">
+      <h2 class="section-title">Навыки</h2>
+
+      <div class="card-grid">
+        <article class="skill-card">
+          <i class="devicon-python-plain"></i>
+          <h3>Python</h3>
+          <p>Основной язык</p>
+        </article>
+
+        <article class="skill-card">
+          <i class="devicon-django-plain"></i>
+          <h3>Django</h3>
+          <p>Backend-фреймворк</p>
+        </article>
+
+        <article class="skill-card">
+          <i class="devicon-html5-plain"></i>
+          <h3>HTML5</h3>
+          <p>Семантическая разметка</p>
+        </article>
+
+        <article class="skill-card">
+          <i class="devicon-css3-plain"></i>
+          <h3>CSS</h3>
+          <p>Адаптивная верстка</p>
+        </article>
+
+        <article class="skill-card">
+          <i class="devicon-javascript-plain"></i>
+          <h3>JavaScript</h3>
+          <p>Интерактивность</p>
+        </article>
+
+        <article class="skill-card">
+          <i class="devicon-postgresql-plain"></i>
+          <h3>SQL</h3>
+          <p>Работа с БД</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+  <div class="footer-links">
+    <a href="mailto:azz@example.com"  aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+    <a href="https://t.me/azz"        aria-label="Telegram" target="_blank"><i class="fa-brands fa-telegram"></i></a>
+    <a href="https://github.com/azz"  aria-label="GitHub"   target="_blank"><i class="fa-brands fa-github"></i></a>
+    <a href="https://instagram.com/azz" aria-label="Instagram" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+  </div>
+  © {{ now.year }} Azz
+</footer>
+
+
+  <script src="{% static 'myapp/js/particles.min.js' %}"></script>
+  <script src="{% static 'myapp/js/script.js' %}"></script>
+</body>
+</html>

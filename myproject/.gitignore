@@ -1,0 +1,31 @@
+venv
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+db.sqlite3
+
+# Distribution / packaging
+.PyInstaller
+#  PyInstaller files
+*.egg-info
+#  Installer logs
+pip-log.txt
+#  Unit test / coverage reports
+htmlcov/
+#  Translations
+*.mo    
+*.pot
+#  Django stuff:
+*.log
+#  Sphinx documentation
+docs/_build/    
+#  PyBuilder
+target/ 
+#  mypy
+.mypy_cache/    
+#  Pyre type checker
+.pyre/
+#  Cython debug symbols
+cython_debug/
