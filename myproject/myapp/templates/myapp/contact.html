@@ -73,6 +73,24 @@
     </section>
   </main>
 
+
+<main style="padding-top:120px">
+  <div class="contact-form">
+    <h2>Написать мне</h2>
+
+    {% if sent %}
+      <p class="success">Сообщение успешно отправлено, спасибо!</p>
+    {% endif %}
+
+    <form method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit">Отправить</button>
+    </form>
+  </div>
+</main>
+
+
   <footer class="site-footer">
   <div class="footer-links">
     <a href="mailto:sobirjonov0909@gmail.com"  aria-label="Email"><i class="fa-solid fa-envelope"></i></a>

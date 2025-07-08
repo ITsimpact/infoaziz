@@ -1,9 +1,8 @@
 console.log('script.js загружен');
 
-/* ─────────────────────────────────────────── */
 document.addEventListener('DOMContentLoaded', () => {
 
-  /* ==== 1.  Анимация появления (.reveal) ==== */
+
   const revealObserver = new IntersectionObserver((entries, obs) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -15,15 +14,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.querySelectorAll('.reveal')
           .forEach(el => revealObserver.observe(el));
-  window.revealObserver = revealObserver;           // удобно дебажить
+  window.revealObserver = revealObserver;
   console.log('Reveal-observer запущен ✅');
 
-  /* ==== 2.  Переключатель темы ==== */
+
   const body        = document.body;
   const btnTheme    = document.getElementById('themeToggle');
   const iconTheme   = document.getElementById('themeIcon');
 
-  // ставим сохранённую тему
+
   const saved = localStorage.getItem('theme') || 'dark';
   if (saved === 'light') {
     body.classList.add('theme-light');
@@ -37,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
     iconTheme.classList.toggle('fa-sun',  light);
   });
 
-  /* ==== 3.  Бургер-меню ==== */
+
   const burgerBtn  = document.getElementById('burgerBtn');
   const burgerIcon = document.getElementById('burgerIcon');
   const navLinks   = document.querySelector('.nav-links');
@@ -51,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
       themeToggle.classList.toggle('open', opened);
     });
 
-    /* закрываем меню после клика */
+
     navLinks.querySelectorAll('a').forEach(link =>
       link.addEventListener('click', () => {
         navLinks.classList.remove('nav-open');
@@ -62,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
     );
   }
 
-  /* ==== 4.  Lazy-loading fallback ==== */
+
   const lazyImgs = Array.from(document.querySelectorAll('img[loading="lazy"]'));
   if (!('loading' in HTMLImageElement.prototype) && 'IntersectionObserver' in window) {
 
@@ -82,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
       imgObserver.observe(img);
     });
   }
-  /* ==== 5.  Скрываем loader после полной загрузки ==== */
+
   window.addEventListener('load', () => {
     const loader = document.getElementById('loader');
     if (loader) loader.classList.add('hidden');

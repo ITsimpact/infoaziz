@@ -1,4 +1,3 @@
-/* ───────────  1. палитра тем ─────────── */
 :root{
   --bg:#0d1117;
   --card:#11161f;
@@ -16,7 +15,6 @@
   --accent:#0077ff;
 }
 
-/* ───────────  2. базовая раскладка ─────────── */
 html,body{
   margin:0;padding:0;height:100%;
   font-family:"Segoe UI",sans-serif;
@@ -27,73 +25,152 @@ html,body{
 }
 #particles-js{position:fixed;inset:0;z-index:-1;background:var(--bg);}
 
-/* ───────────  3. навигация ─────────── */
+
 .navbar{
-  width:100%;background:rgba(0,0,0,.8);
-  position:fixed;top:0;left:0;z-index:1000;
+  width:100%;
+  background:rgba(0,0,0,.8);
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:1000;
   backdrop-filter:blur(5px);
 }
 .nav-container{
-  max-width:1200px;margin:auto;padding:.8rem 2rem;
-  display:flex;justify-content:space-between;align-items:center;gap:14px;
+  max-width:1200px;
+  margin:auto;
+  padding:.8rem 2rem;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:14px;
 }
-.logo{color:var(--text);font-size:1.6rem;font-weight:bold;}
-.nav-links{list-style:none;display:flex;gap:1.5rem;margin:0;padding:0;}
+.logo{
+  color:var(--text);
+  font-size:1.6rem;
+  font-weight:bold;
+}
+
+.nav-links{
+  list-style:none;
+  display:flex;
+  gap:1.5rem;
+  margin:0;
+  padding:0;
+}
 .nav-links li a{
   color:var(--accent);text-decoration:none;font-size:1rem;
   transition:color .3s;
 }
 .nav-links li a:hover{color:var(--text);}
 
-/* переключатель темы */
+
 #themeToggle{
-  background:none;border:none;cursor:pointer;
-  font-size:22px;color:var(--accent);
+  background:none;
+  border:none;
+  cursor:pointer;
+  font-size:22px;
+  color:var(--accent);
   transition:color .25s;
 }
 #themeToggle:hover{color:var(--text);}
 
-/* ───────────  4. главная шапка ─────────── */
+
 header{
-  height:100vh;padding-top:100px;
-  display:flex;align-items:center;justify-content:center;text-align:center;
-  position:relative;z-index:1;
+  height:100vh;
+  padding-top:100px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  position:relative;
+  z-index:1;
 }
 .container h1{font-size:3rem;margin-bottom:.5rem;}
 .container p{font-size:1.2rem;color:var(--accent);}
 
-/* ───────────  5. about ─────────── */
+
 .about-container{
-  max-width:800px;margin:140px auto 60px;
-  background:rgba(0,0,0,.6);padding:30px;border-radius:12px;
-  color:var(--text);text-align:center;
+  max-width:800px;
+  margin:140px auto 60px;
+  background:rgba(0,0,0,.6);
+  padding:30px;
+  border-radius:12px;
+  color:var(--text);
+  text-align:center;
   box-shadow:0 0 20px rgba(255,255,255,.08);
   animation:fadeIn 1s ease;
 }
-.about-container h2{font-size:2.5rem;margin-top:1rem;}
-.about-container p,.about-container li{font-size:1.1rem;margin-bottom:.7rem;}
-.about-container ul{padding:0;list-style:none;}
+.about-container h2{
+  font-size:2.5rem;
+  margin-top:1rem;
+}
+.about-container p,.about-container li{
+  font-size:1.1rem;
+  margin-bottom:.7rem;
+}
+.about-container ul{
+  padding:0;
+  list-style:none;
+}
 .avatar{
-  width:140px;height:140px;border-radius:50%;object-fit:cover;
-  box-shadow:0 0 10px rgba(255,255,255,.3);margin-bottom:20px;
+  width:140px;
+  height:140px;
+  border-radius:50%;
+  object-fit:cover;
+  box-shadow:0 0 10px rgba(255,255,255,.3);
+  margin-bottom:20px
+  ;
 }
 
-/* ───────────  6. skills ─────────── */
-.skills-section{max-width:1100px;margin:120px auto 60px;padding:0 24px;}
-.section-title{font-size:38px;font-weight:600;text-align:center;margin-bottom:60px;}
-.card-grid{display:grid;gap:40px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));}
+
+.skills-section{
+  max-width:1100px;
+  margin:120px auto 60px;
+  padding:0 24px;
+}
+
+.section-title{
+  font-size:38px;
+  font-weight:600;
+  text-align:center;
+  margin-bottom:60px;
+}
+
+.card-grid{
+  display:grid;
+  gap:40px;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+}
+
 .skill-card{
-  background:var(--card);border:1px solid var(--border);
-  border-radius:12px;padding:32px 24px 28px;text-align:center;
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:32px 24px 28px;
+  text-align:center;
   transition:transform .25s,box-shadow .25s;
 }
 .skill-card:hover{transform:translateY(-6px);box-shadow:0 8px 22px rgba(0,0,0,.45);}
 .skill-card i{
-  font-size:58px;color:var(--accent);margin-bottom:18px;transition:color .25s;
+  font-size:58px;
+  color:var(--accent);
+  margin-bottom:18px;
+  transition:color .25s;
 }
 .skill-card:hover i{color:var(--text);}
-.skill-card h3{margin:0 0 6px;font-size:20px;font-weight:600;}
-.skill-card p{margin:0;font-size:15px;color:var(--muted);}
+.skill-card h3{
+  margin:0 0 6px;
+  font-size:20px;
+  font-weight:600;
+}
+
+
+.skill-card p{
+  margin:0;
+  font-size:15px;
+  color:var(--muted);
+}
+
 @media(max-width:600px){
   .card-grid{gap:28px}
   .skill-card{padding:26px 18px}
@@ -101,19 +178,39 @@ header{
   .skill-card h3{font-size:18px}
 }
 
-/* ───────────  7. contacts ─────────── */
-.contact-section{max-width:800px;margin:120px auto 60px;padding:0 24px;text-align:center;}
-.contact-grid{
-  display:flex;flex-wrap:wrap;gap:32px;justify-content:center;margin-top:50px;
+
+.contact-section{
+  max-width:800px;
+  margin:120px auto 60px;
+  padding:0 24px;
+  text-align:center;}
+
+  .contact-grid{
+  display:flex;
+  flex-wrap:wrap;
+  gap:32px;
+  justify-content:center;
+  margin-top:50px;
 }
 .contact-item{
-  width:140px;height:140px;border-radius:12px;
-  background:var(--card);border:1px solid var(--border);
-  display:flex;flex-direction:column;align-items:center;justify-content:center;
-  gap:14px;color:var(--muted);text-decoration:none;
+  width:140px;
+  height:140px;
+  border-radius:12px;
+  background:var(--card);
+  border:1px solid var(--border);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:14px;
+  color:var(--muted);
+  text-decoration:none;
   transition:transform .25s,box-shadow .25s,color .25s;
 }
-.contact-item i{font-size:40px;color:var(--accent);}
+.contact-item i{
+  font-size:40px;
+  color:var(--accent);
+}
 .contact-item:hover{
   transform:translateY(-6px);
   box-shadow:0 8px 22px rgba(0,0,0,.45);
@@ -124,25 +221,36 @@ header{
   .contact-item i{font-size:32px}
 }
 
-/* ───────────  8. footer ─────────── */
+
 .site-footer{
-  background:#000;text-align:center;padding:32px 16px;
-  font-size:14px;color:#666;
+  background:#000;
+  text-align:center;
+  padding:32px 16px;
+  font-size:14px;
+  color:#666;
 }
-.footer-links{display:flex;gap:24px;justify-content:center;margin-bottom:16px;}
-.footer-links a{color:var(--accent);font-size:22px;transition:color .25s;}
+.footer-links{
+  display:flex;
+  gap:24px;
+  justify-content:center;
+  margin-bottom:16px;
+}
+.footer-links a{
+  color:var(--accent);
+  font-size:22px;
+  transition:color .25s;
+}
 .footer-links a:hover{color:var(--text);}
 
-/* ───────────  9. анимация появления ─────────── */
+
 @keyframes fadeIn{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
 @keyframes fadeUp{from{opacity:0;transform:translateY(40px);}to{opacity:1;transform:translateY(0);}}
 .reveal{opacity:0;transform:translateY(40px);}
 .reveal-active{animation:fadeUp .6s ease-out both;}
 
-/* по умолчанию скрыто на маленьких экранах */
-/* Бургер: основной стиль */
+
 #burgerBtn {
-  display: none; /* скроем на десктопе */
+  display: none;
   background: none;
   border: none;
   font-size: 24px;
@@ -155,7 +263,7 @@ header{
 }
 
 #burgerBtn.open #burgerIcon {
-  color: var(--text); /* белая при открытом меню */
+  color: var(--text);
 }
 
 @media (max-width: 768px) {
@@ -180,23 +288,30 @@ header{
   }
 }
 
-/* цвет бургера перекрывает любые DevIcons */
+
 .navbar #burgerIcon         { color: var(--accent) !important; }
 #burgerBtn.open #burgerIcon { color: var(--text)   !important; }
 
 .avatar{
-  width:140px;height:140px;
-  background:#2a2a2a;        /* серый плейсхолдер */
-  object-fit:cover;border-radius:50%;
+  width:140px;
+  height:140px;
+  background:#2a2a2a;
+  object-fit:cover;
+  border-radius:50%;
 }
 
-/* ───── Loader с тремя точками ───── */
+
 #loader{
-  position:fixed; inset:0;
-  display:flex; justify-content:center; align-items:center;
+  position:fixed;
+  inset:0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
   background:var(--bg);
   z-index:3000;
-  transition:opacity .4s ease, visibility .4s ease;
+  transition:opacity
+  .4s ease, visibility
+  .4s ease;
 }
 #loader.hidden{opacity:0; visibility:hidden;}
 
@@ -215,21 +330,27 @@ header{
   from{ transform:translateY(0);   opacity:.4; }
   to  { transform:translateY(-12px); opacity:1; }
 }
-/* Переключатель темы – всегда виден */
-#themeIcon               { color: var(--accent) !important; }
-#themeToggle:hover #themeIcon { color: var(--text) !important; }
 
-/* когда меню-бургер открыт и кнопка .open добавлена */
-#themeToggle.open #themeIcon { color: var(--text) !important; }
+#themeIcon{
+  color: var(--accent) !important;
+}
+#themeToggle:hover #themeIcon {
+  color: var(--text) !important; 
+}
 
-/* ── иконка переключателя темы: принудительный цвет ── */
+
+#themeToggle.open #themeIcon {
+  color: var(--text) !important;
+}
+
+
 .navbar #themeIcon{
   color: var(--accent) !important;
   transition: color .25s;
 }
 #themeToggle:hover #themeIcon,
 #themeToggle.open #themeIcon{
-  color: var(--text) !important;   /* при наведении и в открытом бургер-меню */
+  color: var(--text) !important;
 }
 
 .navbar #themeToggle i.fa-moon,
@@ -241,7 +362,7 @@ body.theme-light .navbar #themeToggle i.fa-sun {
   color: #1a1a1a !important;
 }
 
-/* Фикс: вернуть шрифт и цвет переключателю темы */
+
 #themeIcon {
   font-family: "Font Awesome 6 Free" !important;
   color: var(--accent) !important;
@@ -250,3 +371,75 @@ body.theme-light #themeIcon {
   color: #1a1a1a !important;
 }
 
+
+.contact-form{
+  max-width: 600px;
+  margin: 60px auto;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 32px 28px;
+  box-shadow: 0 6px 20px rgba(0,0,0,.35);
+  animation: fadeIn .8s ease;
+}
+
+.contact-form h2{
+  margin-top: 0;
+  text-align: center;
+  font-size: 32px;
+}
+
+.contact-form label{
+  display: block;
+  margin: 18px 0 6px;
+  font-weight: 600;
+}
+
+.contact-form input,
+.contact-form textarea{
+  width: 100%;
+  padding: 5px 8px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  resize: vertical;
+  transition: border .25s, box-shadow .25s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+  border-color: var(--accent);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(88,166,255,.35);
+}
+
+.contact-form button{
+  margin-top: 24px;
+  width: 100%;
+  padding: 12px 0;
+  background: var(--accent);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background .25s, transform .25s;
+}
+.contact-form button:hover{
+  background: #3994ff;
+  transform: translateY(-2px);
+}
+
+
+.success{
+  margin: 20px 0;
+  padding: 14px 18px;
+  background: rgba(88,166,255,.15);
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  color: var(--accent);
+  text-align: center;
+}
